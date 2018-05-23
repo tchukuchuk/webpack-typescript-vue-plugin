@@ -9,23 +9,23 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HelloDecorator extends Vue {
-    @Prop() name: string;
-    @Prop() initialEnthusiasm: number;
+    @Prop() public name: string;
+    @Prop() public initialEnthusiasm: number;
 
-    enthusiasm = this.initialEnthusiasm;
+    public enthusiasm = this.initialEnthusiasm;
 
-    mounted() {
-        console.log('this.$mq2=', this.$mq);
+    public mounted() {
+        console.log('this.$mq5=', this.$mq);
     }
 
-    increment() {
+    public increment() {
         this.enthusiasm++;
     }
-    decrement() {
+    public decrement() {
         if (this.enthusiasm > 1) {
             this.enthusiasm--;
         }

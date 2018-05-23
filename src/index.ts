@@ -11,7 +11,10 @@ Vue.use(VueMq, {
     }
 })
 
-let v = new Vue({
+Vue.component("hello-component", HelloComponent)
+Vue.component("hello-decorator-component", HelloDecoratorComponent)
+
+const v = new Vue({
     el: '#app',
     template: `
     <div>
@@ -22,9 +25,5 @@ let v = new Vue({
         <hello-decorator-component :name="name" :initialEnthusiasm="5" />
         </div>
     `,
-    data: { name: 'World' },
-    components: {
-        HelloComponent,
-        HelloDecoratorComponent,
-    },
+    data: { name: 'World' }
 });
