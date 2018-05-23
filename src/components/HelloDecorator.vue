@@ -19,7 +19,7 @@ export default class HelloDecorator extends Vue {
     public enthusiasm = this.initialEnthusiasm;
 
     public mounted() {
-        console.log('this.$mq5=', this.$mq);
+        console.log('this.$mq=', this.$mq);
     }
 
     public increment() {
