@@ -9,14 +9,18 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class HelloDecorator extends Vue {
-    @Prop() name!: string;
-    @Prop() initialEnthusiasm!: number;
+    @Prop() name!;: string;
+    @Prop() initialEnthusiasm!;: number;
 
     enthusiasm = this.initialEnthusiasm;
+
+    mounted() {
+        console.log('this.$mq=', this.$mq);
+    }
 
     increment() {
         this.enthusiasm++;
@@ -35,6 +39,6 @@ export default class HelloDecorator extends Vue {
 
 <style>
 .greeting {
-    font-size: 20px;
+  font-size: 20px;
 }
 </style>
